@@ -6,14 +6,16 @@ function Footer() {
     {/* Footer container */}
     <footer className="bg-[#78716c] text-center rounded-t-xl mt-3 dark:bg-neutral-600">
         <div className="container m-auto pt-5 pb-3 px-12">
-            <div className="container">
+            <div className="container flex flex-col">
                 {/* <!--First section--> */}
-                <div className=" text-sm">
-                  <h5
-                    className="mb-2 font-bold uppercase text-white dark:text-neutral-200">
-                    About Us
-                  </h5>
-                  <div className='flex mx-auto w-[60%] text-white justify-evenly items-center'>
+                <div className="text-sm flex flex-col">
+                  <div>
+                    <h5
+                      className="mb-2 font-bold uppercase text-white dark:text-neutral-200">
+                      About Us
+                    </h5>
+                  </div>
+                  <div className='flex lg:flex-row sm:flex-col mx-auto w-[60%] text-white justify-evenly items-center'>
                     <div>
                         <p>Contact</p>
                     </div>
