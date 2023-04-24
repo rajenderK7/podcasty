@@ -44,8 +44,8 @@ const PodcastPage = async ({ params: { slug } }: Slug) => {
   return (
     <div className="body-font font-mabry">
       <p className="text-center my-4 text-4xl font-bold">{title}</p>
-      <div className="mb-5 flex bg-[#ffffff] flex-col justify-center lg:flex lg:flex-row lg:justify-evenly lg:items-center h-[480px]">
-        <div className="border-2 border-black rounded-lg text-center w-full p-3 lg:mr-3 hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:shadow-lg h-[480px] hover:border-r-4 hover:border-b-4 hover:border-black">
+      <div className="mb-5 flex bg-[#f4f4f1] flex-col justify-center lg:flex lg:flex-row lg:justify-evenly lg:items-center h-[480px]">
+        <div className="border-2 bg-[#ffffff] border-black rounded-lg text-center w-full p-3 lg:mr-3 hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:shadow-lg h-[480px] hover:border-r-4 hover:border-b-4 hover:border-black">
           <div className="w-full relative rounded-lg h-[90%]">
             <Image className="rounded-lg" src={bannerURL} alt={title} fill/>
           </div>
