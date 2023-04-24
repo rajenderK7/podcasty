@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
+import Search from "@/components/Search";
 import Trending from "@/components/Trending";
 import { fetchPodcasts } from "@/sanity/utils/podcasts";
 
@@ -8,6 +9,9 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col">
+      <div className="hidden lg:relative">
+        <Search />
+      </div>
       {/* @ts-ignore */}
       <Trending />
       {/* Main Podcasts */}

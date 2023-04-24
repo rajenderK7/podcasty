@@ -53,14 +53,14 @@ const PodcastPage = async ({ params: { slug } }: Slug) => {
         </div>
         <div className="border-2 border-black rounded-lg w-[50%] flex flex-col h-full p-3 bg-white hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-4 hover:border-b-4 hover:border-black">
           <div>
-            <p className="pb-1 text-xl">Author: {author}</p>
-            <p className="pb-1">
+            <p className="pb-1 text-xl">By: {author}</p>
+            <p className="pb-1 text-xl">
               Category:{" "}
               {categories.map((category, index) => (
                 <span key={index}>{category}</span>
               ))}
             </p>
-            <p className="pb-1">
+            <p className="pb-1 text-xl">
               Favorites: {favorites ?? <span>loading</span>}
             </p>
           </div>

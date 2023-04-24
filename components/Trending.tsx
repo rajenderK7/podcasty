@@ -10,7 +10,7 @@ const TrendingChip = ({ title }: CategoryProps) => {
   return (
     <Link
       href={`/categories/${title}`}
-      className="mx-2 p-1.5 min-w-[200px] text-center rounded-lg bg-[#f3a642] hover:bg-[#77c9ed] hover:text-black hover:border-black hover:border-b-4 hover:border-r-4"
+      className="mx-2 p-1.5 min-w-[200px] border-2 border-black text-center rounded-lg bg-[#f3a642] hover:bg-[#77c9ed] hover:text-black hover:border-black hover:border-b-4 hover:border-r-4"
     >
       {title}
     </Link>

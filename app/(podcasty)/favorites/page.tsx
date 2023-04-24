@@ -10,7 +10,11 @@ const Page = async () => {
   return (
     <div>
       <SignedIn>
-        <h1 className="font-bold text-xl my-3">My Favorites</h1>
+        <h1 className="font-bold text-xl mt-3 mb-1">My Favorites</h1>
+        <p className="text-center mb-4">
+          Navigate to a podcast and click add to favorites, refresh to see your
+          favorites 🚀
+        </p>
         {favoritePodcasts.length > 0 &&
           favoritePodcasts.map((podcast) => {
             return <Card key={podcast._slug} {...podcast} />;

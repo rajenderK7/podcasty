@@ -1,44 +1,39 @@
-import React from "react";
 import { BiSearch } from "react-icons/bi";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs/app-beta";
-import LoginButton from "./LoginButton";
 import Link from "next/link";
+import UserProfile from "./UserProfile";
+import Search from "./Search";
 
 const Header = () => {
   return (
-    <header className="bg-[#f4f4f1] sticky top-0 z-50 flex border-b border-b-black justify justify-between items-center shadow-md h-[58px] p-3 text-xl">
+    <header className="bg-[#f4f4f1] sticky top-0 z-50 flex border-b border-b-black justify justify-between items-center shadow-md h-[58px] p-3 lg:text-xl">
       <div className="flex items-center justify-between">
-        <h1 className="ml-4 cursor-pointer font-bold">Podcasty</h1>
+        <Link href="/" className="cursor-pointer font-bold">
+          Podcasty
+        </Link>
       </div>
 
-      <div className="flex border-black border items-center rounded-full w-[50%] p-1 text-base bg-white">
-        <input
-          className="flex-grow pl-5 bg-transparent outline-none"
-          type="text"
-          placeholder="Search your liking.."
-        />
-        <BiSearch className="mx-2 cursor-pointer text-2xl" />
-      </div>
+      <Search />
 
-      <div className="flex justify-end items-center space-x-3">
+      <div className="lg:text-lg flex justify-end items-center space-x-3 underline">
+        <Link
+          href="/favorites"
+          className="hover:cursor-pointer font-semibold hover:scale-110 duration-150"
+        >
+          Favorites
+        </Link>
         <Link
           href="/explore"
-          className="text-xl hover:cursor-pointer font-semibold hover:scale-110 duration-150"
+          className="hover:cursor-pointer font-semibold hover:scale-110 duration-150"
         >
           Explore
         </Link>
         <Link
           href="/admin"
-          className="text-xl hover:cursor-pointer font-semibold hover:scale-110 duration-150"
+          className="hover:cursor-pointer font-semibold hover:scale-110 duration-150 mr-3"
         >
           Admin
         </Link>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        <SignedOut>
-          <LoginButton />
-        </SignedOut>
+        <UserProfile />
       </div>
     </header>
   );
