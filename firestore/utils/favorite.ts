@@ -38,7 +38,7 @@ export const removeFromFavorite = async (podcastId: string, userId: string) => {
   await deleteDoc(docRef);
 };
 
-export const fetchuserFavoritePodcasts = async (
+export const fetchUserFavoritePodcastsIds = async (
   userId: string
 ): Promise<string[]> => {
   const collectionRef = collection(db, "likes");

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
       <html lang="en">
         <body className="max-w-5xl lg:mx-auto">
           <Header />
-          {children}
+          <div className="mx-3 lg:mx-auto">{children}</div>
         </body>
       </html>
     </ClerkProvider>
